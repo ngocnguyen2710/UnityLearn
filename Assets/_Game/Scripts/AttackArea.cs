@@ -6,7 +6,7 @@ public class AttackArea : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D coliision)
     {
-        if (coliision.tag == "Player" || coliision.tag == "Enemy") {
+        if (coliision.CompareTag("Player") || coliision.CompareTag("Enemy")) {
             coliision.GetComponent<Character>().OnHit(30f);
         }
     }

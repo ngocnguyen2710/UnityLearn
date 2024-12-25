@@ -162,14 +162,14 @@ public class Player : Character
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Coin") {
+        if(collision.CompareTag("Coin")) {
             coin++;
             PlayerPrefs.SetInt("coin", coin);
             UIManager.instance.SetCoin(coin);
             Destroy(collision.gameObject);
         }
 
-        if(collision.tag == "DeadZone") {
+        if(collision.CompareTag("DeadZone")) {
             // isDead = true;
             ChangeAnim("die");
             Invoke(nameof(OnInit), 1f);
