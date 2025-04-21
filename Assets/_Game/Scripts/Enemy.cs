@@ -62,13 +62,13 @@ public class Enemy : Character
     public void Moving()
     {
         ChangeAnim("run");
-        rb.velocity = transform.right * moveSpeed;
+        rb.linearVelocity = transform.right * moveSpeed;
     }
 
     public void StopMoving() 
     {
         ChangeAnim("idle");
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
     }
 
     public void Attack()

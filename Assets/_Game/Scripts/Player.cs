@@ -62,7 +62,7 @@ public class Player : Character
         // horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         if (isAttack) {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             return;
         }
 
@@ -90,7 +90,7 @@ public class Player : Character
         }
 
         //fall
-        if (!isGrounded && rb.velocity.y < 0) {
+        if (!isGrounded && rb.linearVelocity.y < 0) {
             ChangeAnim("fall");
             isJumping = false;
         }
@@ -98,13 +98,13 @@ public class Player : Character
         //move
         if (Mathf.Abs(horizontal) > 0.1f) {
             // ChangeAnim("run");
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
             Debug.Log(horizontal);
             transform.rotation = Quaternion.Euler(new Vector3(0, horizontal > 0 ? 0 : horizontal*180, 0));
             // transform.localScale = new Vector3(horizontal, 1, 1);
         } else if (isGrounded) {
             ChangeAnim("idle");
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -124,7 +124,7 @@ public class Player : Character
     public void Attack()
     {
         isAttack = true;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         ChangeAnim("attack");
         
         Invoke(nameof(ResetAttack), 0.5f);
@@ -142,7 +142,7 @@ public class Player : Character
 
     public void Throw()
     {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         ChangeAnim("throw");
         isAttack = true;
         Invoke(nameof(ResetAttack), 0.5f);

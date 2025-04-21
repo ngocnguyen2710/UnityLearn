@@ -10,12 +10,12 @@ public class Kunai : MonoBehaviour
     void Start()
     {
         OnInit();
-        rb.velocity = transform.right * 5f;
+        rb.linearVelocity = transform.right * 5f;
     }
 
     public void OnInit() 
     {
-        rb.velocity = transform.right * 5f;
+        rb.linearVelocity = transform.right * 5f;
         Invoke(nameof(OnDespawn), 4f);
     }
     
