@@ -13461,6 +13461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kunai
       objectReference: {fileID: 0}
+    - target: {fileID: 2122208611852629324, guid: 28958b1d57b3d7b499a50caf4e659b59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6552929112420197712, guid: 28958b1d57b3d7b499a50caf4e659b59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.402
@@ -13517,6 +13521,10 @@ PrefabInstance:
     - target: {fileID: 8442306497260083452, guid: e3119293189570948babf69b38286228, type: 3}
       propertyPath: m_Name
       value: HitVFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442306497260083452, guid: e3119293189570948babf69b38286228, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8972041113618375418, guid: e3119293189570948babf69b38286228, type: 3}
       propertyPath: m_LocalPosition.x

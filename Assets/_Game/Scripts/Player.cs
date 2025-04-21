@@ -59,7 +59,7 @@ public class Player : Character
     {
         if (isDead) return;
         isGrounded = CheckGrounded();
-        horizontal = Input.GetAxisRaw("Horizontal");
+        // horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         if (isAttack) {
             rb.velocity = Vector2.zero;
